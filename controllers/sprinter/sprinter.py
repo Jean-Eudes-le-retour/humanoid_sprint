@@ -24,7 +24,7 @@ class Sprinter(Robot):
         # self.LHipRoll = self.getDevice('LHipRoll')
         # self.RHipPitch = self.getDevice('RHipPitch')
         # self.LHipPitch = self.getDevice('LHipPitch')
-        # self.RKneePitc = self.getDevice('RKneePitch')
+        # self.RKneePitch = self.getDevice('RKneePitch')
         # self.LKneePitch = self.getDevice('LKneePitch')
         # self.RAnklePitch = self.getDevice('RAnklePitch')
         # self.LAnklePitch = self.getDevice('LAnklePitch')
@@ -49,7 +49,8 @@ class Sprinter(Robot):
             # self.RHipYawPitch.setPosition(-1)
             # print walk.getTime()  # display the current time of the forward.motion
             if walk.getTime() == 1360:  # we reached the end of forward.motion
-                walk.setTime(360)  # loop back to the beginning of the walking sequence
+                # loop back to the beginning of the walking sequence
+                walk.setTime(360)
             # Perform a simulation step, quit if the simulation is over.
             if self.step(self.timeStep) == -1:
                 break

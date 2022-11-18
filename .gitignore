@@ -1,1 +1,2 @@
 controllers/race_stopwatch/build
+py_local_test.sh
