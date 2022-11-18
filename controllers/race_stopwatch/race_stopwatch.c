@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
       break;
     }
   } while (wb_robot_step(time_step) != -1);
-
+  char str_buffer[512];
   sprintf(str_buffer, "stop:%f", -record);
   wb_robot_wwi_send_text(str_buffer);
 
