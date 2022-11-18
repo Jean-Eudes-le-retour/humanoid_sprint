@@ -130,10 +130,10 @@ int main(int argc, char *argv[])
     }
   } while (wb_robot_step(time_step) != -1);
   char str_buffer[512];
-  sprintf(str_buffer, "stop:%f", -record);
+  sprintf(str_buffer, "stop:%f", record);
   wb_robot_wwi_send_text(str_buffer);
 
-  printf("performance:%f\n", -record);
+  printf("performance:%f\n", record);
 
   wb_supervisor_simulation_set_mode(WB_SUPERVISOR_SIMULATION_MODE_PAUSE);
 

@@ -29,9 +29,9 @@ window.robotWindow.receive = function(message, robot) {
   } else if (message.startsWith('stop')) {
     humanoidSprintTime = message.substr(5);
     humanoidSprintTimeString = parseSecondsIntoReadableTime(humanoidSprintTime);
-    document.getElementById('performance-display').innerHTML = humanoidSprintTimeString;
-    document.getElementById('performance-display').style.color = 'green';
-    document.getElementById('performance-display').style.fontWeight = 'bold';
+    document.getElementById('time-display').innerHTML = humanoidSprintTimeString;
+    document.getElementById('time-display').style.color = 'green';
+    document.getElementById('time-display').style.fontWeight = 'bold';
     document.querySelector(".text").innerHTML = `
       <h2>${benchmarkName} complete</h2>
       <h3>Congratulations you finished the benchmark!</h3>
